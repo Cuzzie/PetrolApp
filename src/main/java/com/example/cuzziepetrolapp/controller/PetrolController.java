@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Cuzzie on 6/8/2017.
@@ -13,9 +15,11 @@ import java.math.BigDecimal;
 public class PetrolController {
 
     @GetMapping("/")
-    public Petrol getPetrolPrice() {
-        Petrol petrol = new Petrol("Ron 95", new BigDecimal("2.05"), "-0.05 compare previous week");
-        return petrol;
+    public List<Petrol> getPetrolPrice() {
+        List<Petrol> petrolList = new ArrayList<>();
+        petrolList.add(new Petrol("Ron 95", new BigDecimal("2.05"), "-0.05 compare previous week"));
+        petrolList.add(new Petrol("Ron 97", new BigDecimal("2.15"), "blablabla"));
+        return petrolList;
     }
 
 }
