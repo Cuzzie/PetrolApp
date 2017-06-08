@@ -24,7 +24,7 @@ public class PetrolPriceScraper {
                 Element name = doc.select("div.rpt_title.rpt_title_" + i).first();
                 Element price = doc.select("div.rpt_price.rpt_price_" + i).first();
                 Element desc = doc.select("div.rpt_subtitle.rpt_subtitle_" + i).first();
-                petrolList.add(new Petrol(name.text(), new BigDecimal(price.text()), desc.text()));
+                petrolList.add(new Petrol(name.text(), price.text(), desc.text()));
             }
         } catch (IOException e) {
             e.printStackTrace();

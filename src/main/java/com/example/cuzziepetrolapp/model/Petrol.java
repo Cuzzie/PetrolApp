@@ -1,14 +1,12 @@
 package com.example.cuzziepetrolapp.model;
 
-import java.math.BigDecimal;
-
 /**
  * Created by Cuzzie on 6/8/2017.
  */
 public class Petrol {
 
     private String name;
-    private BigDecimal price;
+    private String price;
     private String description;
 
     public Petrol() {
@@ -18,12 +16,12 @@ public class Petrol {
         this.name = name;
     }
 
-    public Petrol(String name, BigDecimal price) {
+    public Petrol(String name, String price) {
         this.name = name;
         this.price = price;
     }
 
-    public Petrol(String name, BigDecimal price, String description) {
+    public Petrol(String name, String price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -37,11 +35,11 @@ public class Petrol {
         this.name = name;
     }
 
-    public BigDecimal getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
